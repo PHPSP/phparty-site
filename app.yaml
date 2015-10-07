@@ -1,0 +1,14 @@
+application: phparty7
+version: 0-0-1
+runtime: php55
+api_version: 1
+
+handlers:
+- url: /style
+  static_dir: style
+
+- url: /media
+  static_dir: media
+
+- url: /
+  script: index.html

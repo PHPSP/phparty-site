@@ -1,0 +1,27 @@
+H1,H2,H3{
+    font-family: 'Exo', sans-serif;
+    color: #333;
+    margin-bottom: 50px;
+}
+h1{
+    margin:200px auto 50px;
+    font-size: 3em;
+    font-weight: bold;
+    font-style: italic;
+}
+h2{
+    font-size: 2em;
+}
+h3{
+    font-size: 1.5em;
+}
+main{
+    position: relative;
+    width: 300px;
+    text-align: center;
+    margin: 200px auto;
+}
+BODY{
+    background: #DDD url('/media/php7-logo.png') no-repeat fixed center center ;
+    background-size: contain;
+}
