@@ -1,0 +1,60 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="phparty-content-top">
+  <template>
+    <style>
+        li{
+            display: inline-block;
+        }
+    </style>
+
+    <h2>
+      <template is="dom-repeat" items="{{items}}">
+        <span>{{item}}</span> <span hidden$="[[computeSpanHidden(index)]]"> - </span>
+      </template>
+    </h2>
+
+
+  </template>
+
+  <script>
+    (function () {
+      'use strict';
+
+      Polymer({
+        is: 'phparty-content-top',
+        properties: {
+          items: {
+            type: Array,
+            notify: true,
+          }
+        },
+        ready: function() {
+          this.items = [
+            'PB',
+            'RJ',
+            'SC',
+            'SP'
+          ];
+        },
+      computeSpanHidden: function(index){
+          console.log(index);
+          if(this.items.length - 1 === index)
+          { return true; }
+          else
+          { return false; }
+      }
+      });
+    })();
+  </script>
+
+</dom-module>

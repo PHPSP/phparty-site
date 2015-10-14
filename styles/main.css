@@ -1,0 +1,12 @@
+body {
+    font-family: 'Exo', sans-serif;
+    color: #333333;
+    background: #dddddd;
+    background: #dddddd url('/images/php7-logo.png') no-repeat fixed center 200px ;
+    background-size: contain;
+}
+#mainToolbar{
+    background: #dddddd;
+    color: #333333;
+    text-align: center;
+}

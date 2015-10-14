@@ -1,0 +1,73 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="phparty-content-events">
+  <template>
+    <style>
+        .event{
+            width: 284px;
+            margin-top: 5px;
+        }
+        .card-content{
+            height: 70px !important;
+        }
+        .event-link{
+            text-decoration: none;
+            color: #000000;
+        }
+        .event paper-button{
+            background-color: rgba(255,255,255,0.8);
+        }
+    </style>
+      <template is="dom-repeat" items="{{items}}" as="item" sort="sort">
+        <paper-card class="event" heading="{{item.where}}">
+          <div class="card-content">{{item.desc}}</div>
+            <div class="card-actions">
+              <template is="dom-repeat" items="{{item.events}}" as="event">
+                  <paper-button raised><a target="_blank" class="event-link" href="{{event.link}}">{{event.title}}</a></paper-button>
+              </template>
+            </div>
+        </paper-card>
+      </template>
+  </template>
+
+  <script>
+    (function () {
+      'use strict';
+
+      Polymer({
+        is: 'phparty-content-events',
+        properties: {
+          items: {
+            type: Array,
+            notify: true,
+          }
+        },
+        ready: function() {
+          this.items = [
+              {where :'PB', desc : 'Detalhes em breve.', events:[{title: 'Em Breve', link: '#'}]},
+              {where :'RJ', desc : 'Detalhes em breve.', events:[{title: 'Em Breve', link: '#'}]},
+              {where :'SC', desc : 'Detalhes em breve.', events:[{title: 'Em Breve', link: '#'}]},
+              {where :'SP', desc : 'Detalhes em breve.', events:[{title: 'Em Breve', link: '#'}]},
+          ];
+        },
+          sort: function(a, b) {
+              if (a.where > b.where)
+                return 1;
+              if (a.where < b.where)
+                return -1;
+              return 0;
+          }
+      });
+    })();
+  </script>
+
+</dom-module>
