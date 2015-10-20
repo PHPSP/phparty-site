@@ -52,12 +52,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           }
         },
         ready: function() {
-          this.items = [
-              {where :'PB', desc : 'Detalhes em breve.', events:[{title: 'Em Breve', link: '#'}]},
-              {where :'RJ', desc : 'Detalhes em breve.', events:[{title: 'Em Breve', link: '#'}]},
-              {where :'SC', desc : 'Detalhes em breve.', events:[{title: 'Em Breve', link: '#'}]},
-              {where :'SP', desc : 'Detalhes em breve.', events:[{title: 'Em Breve', link: '#'}]},
-          ];
+          this.items = events;
         },
           sort: function(a, b) {
               if (a.where > b.where)
