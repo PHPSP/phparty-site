@@ -18,8 +18,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </style>
 
     <h2>
-      <template is="dom-repeat" items="{{items}}">
-        <span>{{item}}</span> <span hidden$="[[computeSpanHidden(index)]]"> - </span>
+      <template is="dom-repeat" items="{{items}}" sort="sort">
+        <span>{{item.where}}</span> <span hidden$="[[computeSpanHidden(index)]]"> - </span>
       </template>
     </h2>
 
@@ -39,20 +39,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           }
         },
         ready: function() {
-          this.items = [
-            'PB',
-            'RJ',
-            'SC',
-            'SP'
-          ];
+          this.items = events;
         },
-      computeSpanHidden: function(index){
-          console.log(index);
-          if(this.items.length - 1 === index)
-          { return true; }
-          else
-          { return false; }
-      }
+        computeSpanHidden: shouldBeHidden,
+        sort: sortFunction
       });
     })();
   </script>
