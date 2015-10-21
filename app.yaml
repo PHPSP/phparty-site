@@ -1,14 +1,26 @@
 application: phparty7
-version: 0-0-1
+version: 0-0-2
 runtime: php55
 api_version: 1
 
 handlers:
-- url: /style
-  static_dir: style
+- url: /styles
+  static_dir: styles
 
-- url: /media
-  static_dir: media
+- url: /images
+  static_dir: images
+
+- url: /scripts
+  static_dir: scripts
+
+- url: /data
+  static_dir: data
+
+- url: /elements
+  static_dir: elements
+
+- url: /bower_components
+  static_dir: bower_components
 
 - url: /
   script: index.html
