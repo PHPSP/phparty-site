@@ -1,0 +1,49 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="phparty-content-sponsors">
+  <template>
+    <style>
+        .sponsors{
+            /**width: 284px;**/
+            margin-top: 5px;
+        }
+        .sponsor{
+            float: left;
+        }
+    </style>
+      <paper-card class="sponsors">
+          <template is="dom-repeat" items="{{items}}" as="item">
+              <div class="card-content sponsor"><a href="{{item.url}}" title="{{item.name}}"><img src="{{item.logo}}" alt="{{item.name}}" /></a></div>
+          </template>
+      </paper-card>
+  </template>
+
+  <script>
+    (function () {
+      'use strict';
+
+      Polymer({
+        is: 'phparty-content-sponsors',
+        properties: {
+          items: {
+            type: Array,
+            notify: true,
+          }
+        },
+        ready: function() {
+          this.items = sponsors;
+        }
+      });
+    })();
+  </script>
+
+</dom-module>
