@@ -4,4 +4,5 @@ events = [
     {where :'SC', desc : 'Detalhes em breve.', events:[{title: 'Em Breve', link: '#'}]},
     {where :'SP', desc : 'Detalhes em breve.', events:[{title: 'Em Breve', link: '#'}]},
     {where :'DF', desc : 'Detalhes em breve.', events:[{title: 'Em Breve', link: '#'}]},
+    {where :'MG', desc : 'Um evento para discussão da próxima revolução do PHP.', events:[{title: 'Inscrições', link: 'http://www.meetup.com/PHP-MG/events/226523277/'}]},
 ];
