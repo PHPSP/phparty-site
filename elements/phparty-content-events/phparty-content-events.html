@@ -32,7 +32,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <div class="card-content">{{item.desc}}</div>
             <div class="card-actions">
               <template is="dom-repeat" items="{{item.events}}" as="event">
-                  <paper-button raised><a target="_blank" class="event-link" href="{{event.link}}">{{event.title}}</a></paper-button>
+                  <a class="event-link" target="_blank" href="{{event.link}}" title="{{event.title}}">
+                      <paper-button raised>{{event.title}}</paper-button>
+                  </a>
               </template>
             </div>
         </paper-card>

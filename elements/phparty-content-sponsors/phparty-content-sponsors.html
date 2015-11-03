@@ -22,7 +22,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </style>
       <paper-card class="sponsors">
           <template is="dom-repeat" items="{{items}}" as="item">
-              <div class="card-content sponsor"><a href="{{item.url}}" title="{{item.name}}"><img src="{{item.logo}}" alt="{{item.name}}" /></a></div>
+              <div class="card-content sponsor">
+                  <a target="_blank" href="{{item.link}}" title="{{item.name}}">
+                      <img src="{{item.logo}}" alt="{{item.name}}" />
+                  </a>
+              </div>
           </template>
       </paper-card>
   </template>
