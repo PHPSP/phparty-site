@@ -15,20 +15,26 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         .sponsors{
             /**width: 284px;**/
             margin-top: 5px;
+            margin-right: 10px;
+            height: 90px;
         }
         .sponsor{
             float: left;
         }
+        .sponsor-image{
+            max-height: 80px;
+            max-width: 80px;
+        }
     </style>
-      <paper-card class="sponsors">
-          <template is="dom-repeat" items="{{items}}" as="item">
+      <template is="dom-repeat" items="{{items}}" as="item">
+          <paper-card class="sponsors">
               <div class="card-content sponsor">
                   <a target="_blank" href="{{item.link}}" title="{{item.name}}">
-                      <img src="{{item.logo}}" alt="{{item.name}}" />
+                      <img class="sponsor-image" src="{{item.logo}}" alt="{{item.name}}" />
                   </a>
               </div>
-          </template>
-      </paper-card>
+          </paper-card>
+      </template>
   </template>
 
   <script>
