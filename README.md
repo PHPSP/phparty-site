@@ -7,4 +7,4 @@ Faça um PR alterando o arquivo data/events.js e data/sponsorts.js para incluir 
 Vamos disseminar o PHP7 na comunidade!
 
 # DIVULGUE 
-[http://www.phparty7.com](http://www.phparty7.com)
+[http://phparty7.com/](http://phparty7.com/)
