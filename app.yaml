@@ -1,5 +1,5 @@
 application: phparty7
-version: 0-0-2
+version: 0-0-3
 runtime: php55
 api_version: 1
 
@@ -21,6 +21,10 @@ handlers:
 
 - url: /bower_components
   static_dir: bower_components
+
+- url: /favicon.ico
+  static_files: favicon.ico
+  upload: favicon.ico
 
 - url: /
   script: index.html
