@@ -5,5 +5,5 @@ events = [
     {where :'SP', desc : 'Detalhes em breve.', events:[{title: 'Em Breve', link: '#'}]},
     {where :'DF', desc : 'Detalhes em breve.', events:[{title: 'Em Breve', link: '#'}]},
     {where :'MG', desc : 'Um evento para discussão da próxima revolução do PHP.', events:[{title: 'Inscrições', link: 'http://www.meetup.com/PHP-MG/events/226523277/'}]},
-    {where :'RS', desc : 'Vamos conversar sobre novas funcionalidades, fazer live coding e palestras!', events:[{title: 'Participe', link: 'http://http://www.meetup.com/PHP-RS/events/226566799/'}]},
+    {where :'RS', desc : 'Vamos conversar sobre novas funcionalidades, fazer live coding e palestras!', events:[{title: 'Participe', link: 'http://www.meetup.com/PHP-RS/events/226566799/'}]},
 ];
