@@ -14,4 +14,4 @@ shouldBeHidden = function(index){
     { return true; }
     else
     { return false; }
-}
+};
